@@ -1,0 +1,9 @@
+/target
+/build
+/repo
+/app
+/src/tests/.tmp
+
+.DS_Store
+.cache
+.zed

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <!-- Docs: https://docs.gtk.org/glib/struct.VariantType.html#gvariant-type-strings -->
+    <schema id="studio.planetpeanut.Auroras" path="/studio/planetpeanut/Auroras/">
+        <!-- Hidden -->
+        <key name="last-update" type="x">
+            <default>0</default>
+        </key>
+
+        <!-- Preferences -->
+        <key name="interval" type="x">
+            <default>5</default>
+        </key>
+    </schema>
+</schemalist>

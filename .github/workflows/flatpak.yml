@@ -1,0 +1,38 @@
+name: Flatpak
+
+on:
+  push:
+    branches: [ main, dev ]
+    tags:
+      - '*'
+
+jobs:
+  flatpak:
+    name: Flatpak
+
+    container:
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-49
+      options: --privileged
+
+    strategy:
+      matrix:
+        variant:
+          - arch: x86_64
+            runner: ubuntu-24.04
+          - arch: aarch64
+            runner: ubuntu-24.04-arm
+
+    runs-on: ${{ matrix.variant.runner }}
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+      with:
+        bundle: auroras.flatpak
+        # TODO: Add version number or commit id here
+        # TODO: still builds the prev release on tag, because manifest not updated yet
+        manifest-path: ${{ github.ref_type == 'tag'
+          && 'studio.planetpeanut.Auroras.yml'
+          || 'studio.planetpeanut.Auroras.devel.yml' }}
+        cache-key: flatpak-builder-${{ github.sha }}
+        arch: ${{ matrix.variant.arch }}

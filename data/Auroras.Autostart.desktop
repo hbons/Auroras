@@ -1,0 +1,9 @@
+# TODO: Let org.freedesktop.portal.Background handle this
+[Desktop Entry]
+Name=Auroras
+Type=Application
+Exec=sh -c "type -P auroras &>/dev/null && Auroras || flatpak run studio.planetpeanut.Auroras"
+Icon=studio.planetpeanut.Auroras
+Terminal=false
+X-GNOME-Autostart-enabled=true
+X-AppStream-Ignore=true

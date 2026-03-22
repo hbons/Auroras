@@ -1,0 +1,30 @@
+app-id: studio.planetpeanut.Auroras
+branch: devel
+command: auroras
+
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
+  env:
+    RUST_BACKTRACE: '1'
+
+finish-args:
+  - --device=dri
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+
+modules:
+  - name: auroras
+    buildsystem: meson
+    builddir: true
+    sources:
+      - type: archive
+        url: https://github.com/hbons/Auroras/releases/download/49.0.0/Auroras-49.0.0.tar.xz
+        sha256: c2787dc014778a6ecd8c694bdd8409b177b3c5d8ea66024a6e25aade781e4918 # TODO

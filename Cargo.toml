@@ -1,0 +1,42 @@
+[package]
+name = "Auroras"
+version = "49.0.0"
+repository = "https://www.github.com/hbons/Auroras"
+homepage = "https://planetpeanut.studio/auroras"
+authors = ["Hylke Bons <hello@planetpeanut.studio>"]
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+edition = "2024"
+
+[package.metadata.flatpak]
+id = "studio.planetpeanut.Auroras"
+
+[dependencies]
+# From the Recommended Crate Directory – https://blessed.rs/
+chrono = "0.4.42"
+serde = { version = "1.0.225", features = ["derive"] }
+serde_json = "1.0.145"
+reqwest = "0.12.24"
+rusqlite = { version = "0.37.0", features = ["bundled"] }
+tokio = { version = "1.47.1", features = ["full"] }
+
+# From the GNOME Project – https://gnome.org/
+gio = "0.21.5"
+gtk4 = { version = "0.10.3", features = ["gnome_49"] }
+libadwaita = { version = "0.8.1", features = ["v1_8"] }
+# libgweather = "4.6.0"
+# zbus = { version = "5.11.0", features = ["blocking"] }
+# zvariant = "5.7.0"
+# webkit6 = "0.5.0"
+
+[[bin]]
+name = "auroras"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+debug = false
+codegen-units = 1
+panic = "abort"
+strip = true

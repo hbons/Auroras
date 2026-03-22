@@ -1,0 +1,35 @@
+app-id: studio.planetpeanut.Auroras
+branch: devel
+command: auroras
+
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
+  env:
+    RUST_BACKTRACE: '1'
+
+finish-args:
+  - --device=dri
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+
+modules:
+  - name: geocode-glib
+    # TODO
+
+  - name: auroras
+    buildsystem: meson
+    builddir: true
+    build-options:
+      build-args:
+        - --share=network
+    sources:
+      - type: dir
+        path: "."

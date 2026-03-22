@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Auroras
+Type=Application
+Exec=auroras
+Icon=studio.planetpeanut.Auroras
+Terminal=false
+X-GNOME-UsesNotifications=true

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <name>Auroras</name>
+    <summary>Space weather forecast</summary>
+    <id>studio.planetpeanut.Auroras</id>
+
+    <launchable type="desktop-id">studio.planetpeanut.Auroras.desktop</launchable>
+    <provides>
+        <binary>auroras</binary>
+    </provides>
+
+    <project_group>Planet Peanut Studio</project_group>
+    <project_license>AGPL-3.0-or-later</project_license>
+
+    <url type="homepage">https://planetpeanut.studio/auroras</url>
+    <url type="bugtracker">https://github.com/hbons/Auroras/issues</url>
+    <url type="donation">https://github.com/sponsors/hbons</url>
+    <url type="vcs-browser">https://github.com/hbons/Auroras</url>
+
+    <developer id="studio.planetpeanut">
+        <name>Hylke Bons</name>
+        <email>hello_AT_planetpeanut.studio</email>
+        <url type="homepage">https://planetpeanut.studio</url>
+    </developer>
+
+    <branding>
+        <color type="primary" scheme_preference="light">#6DD2F3</color>
+        <color type="primary" scheme_preference="dark">#00455B</color>
+    </branding>
+
+    <screenshots>
+        <screenshot type="default">
+            <image>https://raw.githubusercontent.com/hbons/Auroras/main/data/screenshots/screenshot-default.png</image>
+            <caption>Space weather forecast</caption>
+        </screenshot>
+        <screenshot>
+            <image>https://raw.githubusercontent.com/hbons/Auroras/main/data/screenshots/screenshot-extra-1.png</image>
+            <caption>Dark style</caption>
+        </screenshot>
+    </screenshots>
+
+    <description>
+        <p>
+            Increase your chances of catching the aurora.
+            Live space weather forecast for tonight and the coming days.
+        </p>
+        <ul>
+            <li>Planetary K-index forecast</li>
+            <li>Solar wind speed, density and temperature</li>
+            <li>Interplanetary magnetic field strength</li>
+            <li>Fediverse activity on the #aurora tag</li>
+        </ul>
+        <p>
+            Data from the NOAA Space Weather Prediction Center (NOAA/SWPC).
+        </p>
+        <p>
+            Have fun, and clear skies!
+        </p>
+    </description>
+
+    <releases>
+        <release version="49.0.0" date="2025-03-14" urgency="medium">
+            <description>
+                <ul>
+                    <li>First release!</li>
+                    <li>Designed for GNOME</li>
+                    <li>Made with care by a human</li>
+                </ul>
+           </description>
+        </release>
+    </releases>
+
+    <content_rating type="oars-1.1">
+        <!-- <content_attribute id="money-purchasing">mild</content_attribute> -->
+    </content_rating>
+
+    <categories>
+        <category>Science</category>
+        <category>Education</category>
+        <category>Astronomy</category>
+        <category>Geoscience</category>
+        <category>Photography</category>
+        <category>Utility</category>
+    </categories>
+
+    <keywords>
+        <keyword>aurora</keyword>
+        <keyword>space</keyword>
+        <keyword>weather</keyword>
+
+        <keyword>astro</keyword>
+        <keyword>borealis</keyword>
+        <keyword>australis</keyword>
+        <keyword>northern lights</keyword>
+        <keyword>southern lights</keyword>
+        <keyword>polar lights</keyword>
+        <keyword>forecast</keyword>
+        <keyword>prediction</keyword>
+        <keyword>tracker</keyword>
+        <keyword>stargazing</keyword>
+        <keyword>night</keyword>
+        <keyword>sky</keyword>
+        <keyword>solar</keyword>
+        <keyword>wind</keyword>
+        <keyword>storm</keyword>
+        <keyword>photography</keyword>
+        <keyword>astrophotography</keyword>
+        <keyword>astronomy</keyword>
+        <keyword>moon</keyword>
+        <keyword>sun</keyword>
+        <keyword>kpi</keyword>
+        <keyword>imf</keyword>
+        <keyword>plasma</keyword>
+        <keyword>geomagnetic</keyword>
+        <keyword>alert</keyword>
+        <keyword>noaa</keyword>
+        <keyword>nasa</keyword>
+        <keyword>ovation</keyword>
+        <keyword>live</keyword>
+    </keywords>
+
+    <metadata_license>CC0-1.0</metadata_license>
+    <update_contact>hello_AT_planetpeanut.studio</update_contact>
+</component>

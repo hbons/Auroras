@@ -1,0 +1,17 @@
+[Unit]
+Description=Auroras mirror service
+After=network.target
+Wants=network-online.target
+
+[Service]
+User=appuser
+Group=appuser
+
+ExecStart=/usr/bin/docker run --rm --name auroras \
+    my-image ./auroras --mirror --interval=60
+
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Git push oval data
+After=network.target
+
+[Service]
+Type=oneshot
+User=appuser
+Group=appuser
+WorkingDirectory=/home/appuser/auroras-data
+ExecStart=/bin/bash -c '\
+    git add . && \
+    git commit -m "Automated auroras push $(date)" && \
+    git push origin main \
+'
