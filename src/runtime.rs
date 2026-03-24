@@ -39,6 +39,15 @@ impl Default for Runtime {
     fn default() -> Self {
         let app_id = "studio.planetpeanut.Auroras";
 
+        // let cargo = env!("CARGO");
+
+        // if env!("CARGO").is_empty() {
+        //     env::set_var("GSETTINGS_SCHEMA_DIR", "./data");
+        // } else {
+        //     dbg!(env!("CARGO"));
+        // }
+
+
         let app_name     = env!("CARGO_PKG_NAME");
         let command_name = env!("CARGO_BIN_NAME");
         let version      = env!("CARGO_PKG_VERSION");
