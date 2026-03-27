@@ -8,9 +8,10 @@
 
 ## 1. Bump version number
 
-* Edit `./meson.build`, `./Cargo.lock`, `./Cargo.toml`
+* Edit `./meson.build`, `./Cargo.toml`
 
 ```shell
+cargo update
 git add ./meson.build ./Cargo.lock ./Cargo.toml
 git status
 git commit -m "meta: Bump version to <VERSION>"
