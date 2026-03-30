@@ -21,7 +21,7 @@ pub fn show_about_dialog(parent: &Window) {
         .developer_name("Hylke Bons")
         .version(env!["CARGO_PKG_VERSION"])
         .release_notes_version(env!["CARGO_PKG_VERSION"])
-        .issue_url("https://github.com/hbons/Auroras/issues/new")
+        .issue_url("https://github.com/hbons/Auroras/issues") // TODO
         .website(env!["CARGO_PKG_HOMEPAGE"])
         .copyright("Copyright © 2025–2026  Hylke Bons")
         .license_type(License::Agpl30)
